@@ -8,15 +8,23 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state={
-      value:'0'
+      total:null,
+      next:null,
+      operation:null,
+      display: '0',
+      reset:false
     }
+  }
+    handleClick = buttonName =>{
+      this.setState({display:buttonName})
+   
   }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-        <Display value={this.state.value}/>
-        <ButtonPanel /> 
+        {/* <Display value={this.state.next || this.state.total ||'0'}/> */}
+        <ButtonPanel/> 
       
         </header>
       

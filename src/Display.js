@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 
 const Display = (props) =>{
 return (
+  
     <div> 
-        <input type = "text" value ={props.value} />
+          {console.log("props are",this .props)}
+        <input type = "text" label ={props.display} />
         </div>
 )
 }
@@ -12,7 +14,7 @@ return (
 //describe the type of props that the parent is going to pass intothis component
 
 Display.propTypes = {
-    value : PropTypes.string.isRequired
+    display : PropTypes.string.isRequired
 }
 
 export default Display;

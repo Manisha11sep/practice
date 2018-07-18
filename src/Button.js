@@ -4,14 +4,12 @@ import PropTypes from "prop-types";
 import React, { Component } from 'react';
 
 export default class Button extends Component {
-handlClick=()=>{
-    this.props.clickHandler(this.props.name);
-}
 
     render() {
         return (
             <div>
-                <button onClick={this.handlClick}> {this.props.name} </button>
+                
+                <button onClick={this.props.action}> {this.props.label} </button>
                 </div>
             
         );
@@ -20,5 +18,5 @@ handlClick=()=>{
 
 Button.propTypes={
     type:PropTypes.string,
-    handleClick:PropTypes.func,
+    // handleClick:PropTypes.func,
 };
